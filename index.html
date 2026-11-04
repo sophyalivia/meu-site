@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============================================================
+       TROQUE 1 de 4 — o título que aparece na aba do navegador
+       ============================================================ -->
+  <title>Site de Lívia Sophya </title>
+
+  <!-- Icone da aba. Fica embutido aqui dentro para o navegador nao
+       precisar pedir um arquivo separado ao servidor. -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>%F0%9F%8C%90</text></svg>">
+
+  <style>
+    /* ============================================================
+       TROQUE 2 de 4 — as suas cores
+       Mude os dois códigos abaixo e a página inteira muda de cor.
+       Procure códigos de cor em: https://htmlcolorcodes.com
+       ============================================================ */
+    :root {
+      --cor-destaque: #2E7D5B;   /* verde */
+      --cor-fundo:    #F6F7F6;   /* cinza bem claro */
+    }
+
+    /* Daqui para baixo você não precisa mexer para a atividade
+       funcionar. Mas pode mexer à vontade se quiser. */
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 32px 20px 60px;
+      background: var(--cor-fundo);
+      color: #1C1C1C;
+      font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 3px solid var(--cor-destaque);
+      padding-bottom: 20px;
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 7vw, 52px);
+      line-height: 1.1;
+      margin: 0 0 8px;
+      color: var(--cor-destaque);
+    }
+
+    .turma {
+      margin: 0;
+      font-size: 17px;
+      color: #5A5A5A;
+    }
+
+    h2 {
+      font-size: 21px;
+      margin: 32px 0 12px;
+      color: #1C1C1C;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    li { margin-bottom: 8px; }
+
+    /* --- painel de rede --- */
+
+    .painel {
+      margin-top: 40px;
+      background: #14181A;
+      border-radius: 8px;
+      padding: 20px 22px;
+      overflow-x: auto;
+    }
+
+    .painel h2 {
+      color: #7BE8A8;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin: 0 0 16px;
+      font-family: Consolas, "Courier New", monospace;
+    }
+
+    .painel table {
+      border-collapse: collapse;
+      width: 100%;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 14px;
+    }
+
+    .painel td {
+      padding: 7px 0;
+      border-bottom: 1px solid #2A3033;
+      vertical-align: top;
+    }
+
+    .painel tr:last-child td { border-bottom: none; }
+
+    .painel td:first-child {
+      color: #8A9A92;
+      width: 42%;
+      padding-right: 16px;
+    }
+
+    .painel td:last-child {
+      color: #7BE8A8;
+      font-weight: bold;
+      word-break: break-all;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 1px solid #D8DAD8;
+      font-size: 14px;
+      color: #6A6A6A;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <!-- ============================================================
+           TROQUE 3 de 4 — o seu nome
+           ESTE É O MAIS IMPORTANTE DA ATIVIDADE.
+           Escreva o seu nome aqui dentro. É por ele que você e o
+           seu colega vão saber de quem é o site que apareceu na tela.
+           ============================================================ -->
+      <h1> Lívia Sophya </h1>
+
+      <p class="turma">1º ano · Técnico em Desenvolvimento Web · IFMA</p>
+    </header>
+
+    <!-- ============================================================
+         TROQUE 4 de 4 — três coisas sobre você
+         Pode ser qualquer coisa: um time, uma série, uma comida,
+         um jogo, uma música. Só não deixe do jeito que está.
+         ============================================================ -->
+    <h2>Três coisas sobre mim</h2>
+    <ul>
+      <li>ESCREVA A PRIMEIRA COISA AQUI</li>
+      <li>ESCREVA A SEGUNDA COISA AQUI</li>
+      <li>ESCREVA A TERCEIRA COISA AQUI</li>
+    </ul>
+
+    <!-- ============================================================
+         PAINEL DE REDE
+         Você não precisa mexer aqui. Este painel se preenche sozinho
+         e mostra por qual endereço esta página foi aberta.
+         Copie estes dados para a sua folha de laboratório.
+         ============================================================ -->
+    <section class="painel">
+      <h2>Painel de rede</h2>
+      <table>
+        <tr>
+          <td>Endereço completo</td>
+          <td id="endereco">—</td>
+        </tr>
+        <tr>
+          <td>Host</td>
+          <td id="host">—</td>
+        </tr>
+        <tr>
+          <td>Porta</td>
+          <td id="porta">—</td>
+        </tr>
+        <tr>
+          <td>Protocolo</td>
+          <td id="protocolo">—</td>
+        </tr>
+        <tr>
+          <td>Aberto às</td>
+          <td id="hora">—</td>
+        </tr>
+      </table>
+    </section>
+
+    <footer>
+      Feito na aula de Redes de Computadores &middot; Semana 7 &middot; Cliente-servidor e portas
+    </footer>
+
+  </div>
+
+  <script>
+    // Este script apenas LÊ o endereço da barra do navegador e mostra
+    // na tela. Ele não muda nada e não precisa ser alterado.
+
+    function preencherPainel() {
+      var l = window.location;
+
+      // Se a pagina foi aberta com duplo clique no arquivo, o protocolo
+      // e' "file:" e nao existe servidor nenhum. Avisa e para por aqui.
+      if (l.protocol === "file:") {
+        document.getElementById("endereco").textContent = l.href;
+        document.getElementById("host").textContent = "(nenhum)";
+        document.getElementById("porta").textContent = "(nenhuma)";
+        document.getElementById("protocolo").textContent = "file";
+        document.getElementById("hora").textContent =
+          "Voce abriu o arquivo direto, sem servidor. Use o Go Live.";
+        return;
+      }
+
+      document.getElementById("endereco").textContent = l.href;
+      document.getElementById("host").textContent = l.hostname;
+      document.getElementById("protocolo").textContent = l.protocol.replace(":", "");
+
+      // Se a porta for a padrão do protocolo, o navegador não a escreve
+      // no endereço — e neste caso location.port vem vazio.
+      if (l.port) {
+        document.getElementById("porta").textContent = l.port;
+      } else if (l.protocol === "https:") {
+        document.getElementById("porta").textContent = "443 (padrao, nao aparece na barra)";
+      } else if (l.protocol === "http:") {
+        document.getElementById("porta").textContent = "80 (padrao, nao aparece na barra)";
+      } else {
+        document.getElementById("porta").textContent = "(nenhuma)";
+      }
+
+      var agora = new Date();
+      document.getElementById("hora").textContent = agora.toLocaleTimeString("pt-BR");
+    }
+
+    preencherPainel();
+  </script>
+</body>
+</html>
